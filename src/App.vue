@@ -1,29 +1,27 @@
 <template>
   <div id="app">
     <div class="hello-world">
-      <img alt="Vue logo" src="./assets/logo.png" />
       <div class="hello-world__message">
         {{ message }}
       </div>
     </div>
-    <TodoList></TodoList>
+    <ShortTermTodo></ShortTermTodo>
+    <LongTermTodo></LongTermTodo>
     <Counter v-bind:initialValue="1000"></Counter>
   </div>
 </template>
 
 <script>
-import TodoList from "@/components/TodoList.vue"
-import Counter from "@/components/Counter.vue"
+import ShortTermTodo from "@/components/ShortTermTodo.vue"
+import LongTermTodo from "@/components/LongTermTodo.vue"
 export default {
   name: "App",
   components: {
-    TodoList,
-    Counter,
+    ShortTermTodo,
+    LongTermTodo,
   },
   data: function () {
-    return {
-      message: "WebExpert Course Vue Template",
-    }
+    return {}
   },
   methods: {},
 }

@@ -1,23 +1,19 @@
 <template>
   <div class="todolist">
-    <div>Todoリスト</div>
-    <div>
-      <div v-for="(todo, index) in todos" v-bind:key="index" class="todo">
-        <div class="todo__checkbox">
-          <input type="checkbox" v-model="todo.isDone" />
-        </div>
-        <div v-if="todo.isDone" class="todo__text todo__text--done">
-          {{ index }}:{{ todo.text }}
-        </div>
-        <div v-else class="todo__text">{{ index }}:{{ todo.text }}</div>
-        <div v-on:click="deleteTodo(index)" class="todo__delete">削除</div>
+    <div>Long Term</div>
+    <div v-for="(todo, index) in todos" v-bind:key="index" class="todo">
+      <div class="todo__checkbox">
+        <input type="checkbox" v-model="todo.isDone" />
       </div>
+      <div v-if="todo.isDone" class="todo__text todo__text--done">
+        {{ index }}:{{ todo.text }}
+      </div>
+      <div v-else class="todo__text">{{ index }}:{{ todo.text }}</div>
+      <div v-on:click="deleteTodo(index)" class="todo__delete">削除</div>
     </div>
     <div>
-      <div>
-        <input type="text" v-model="inputTodo" />
-        <div v-on:click="addTodo">追加</div>
-      </div>
+      <input type="text" v-model="inputTodo" />
+      <div v-on:click="addTodo">追加</div>
     </div>
   </div>
 </template>
@@ -29,20 +25,21 @@ export default {
       inputTodo: "",
       todos: [
         {
-          text: "ひき肉を300g買う",
+          text: "귀거리",
           isDone: false,
         },
         {
-          text: "ホウレンソウを1束買う",
+          text: "아이라이너",
           isDone: false,
         },
         {
-          text: "ピーマンを2個買う",
+          text: "예쁜 다리",
           isDone: false,
         },
       ],
     }
   },
+
   methods: {
     addTodo() {
       if (this.inputTodo !== "") {
@@ -97,5 +94,9 @@ export default {
   margin-left: 2rem;
   background-color: #b2ae3b;
   border-radius: 5px;
+}
+.orange {
+  background-color: orange;
+  color: white;
 }
 </style>
