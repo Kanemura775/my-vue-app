@@ -95,8 +95,4 @@ export default {
   background-color: #b2ae3b;
   border-radius: 5px;
 }
-.orange {
-  background-color: orange;
-  color: white;
-}
 </style>

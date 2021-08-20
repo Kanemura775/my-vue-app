@@ -1,13 +1,11 @@
 <template>
   <div id="app">
     <div class="hello-world">
-      <div class="hello-world__message">
-        {{ message }}
-      </div>
+      <div class="hello-world__message"></div>
     </div>
+    <div class="ore">ore</div>
     <ShortTermTodo></ShortTermTodo>
     <LongTermTodo></LongTermTodo>
-    <Counter v-bind:initialValue="1000"></Counter>
   </div>
 </template>
 
@@ -43,5 +41,9 @@ export default {
 
 .hello-world .hello-world__message {
   color: #2c3e50;
+}
+.ore {
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
